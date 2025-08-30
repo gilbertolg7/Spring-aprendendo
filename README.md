@@ -1,39 +1,52 @@
-🎨 **Tela de Login Animada**
+💻 **Sistema Web de Gestão de Cadastros**
 
-Este projeto é uma tela de login simples e responsiva, criada com HTML, CSS e JavaScript puro. O objetivo principal é praticar e demonstrar habilidades de front-end em animações e interatividade sem a necessidade de frameworks complexos.
+Este projeto é um sistema web completo, criado com Java e Spring Boot no backend e HTML, CSS e Bootstrap no frontend. O objetivo é demonstrar a construção de uma aplicação robusta com persistência de dados em um banco PostgreSQL, gerenciando informações de cidades, funcionários e estados.
 
 ✅ **Funcionalidades Principais**
 
-Design Responsivo: A tela se adapta a diferentes tamanhos de tela, funcionando bem tanto em dispositivos móveis quanto em desktops.
-
-Animações: Efeitos visuais suaves são aplicados na entrada dos elementos, criando uma experiência de usuário mais agradável e moderna.
-
-Interatividade Básica: Validação simples de campos e transições visuais ao interagir com os elementos do formulário.
+Gestão de Dados: Crie, edite, visualize e exclua informações de Cidades, Funcionários e Estados.
+Persistência de Dados: Todos os dados são armazenados de forma segura em um banco de dados PostgreSQL.
+Layout Moderno: A interface é construída com Bootstrap 5, garantindo um design responsivo e acessível em qualquer dispositivo.
+Injeção de Dependências: O Spring Boot facilita a automação e a organização do código.
 
 ▶️ **Como Usar**
 
-1. Pré-requisitos
-Um navegador web moderno (como Google Chrome, Firefox ou Microsoft Edge).
+Pré-requisitos
+Java Development Kit (JDK) 17+
+Apache Maven
+PostgreSQL (instalado e em execução)
+Um editor de código como VS Code ou uma IDE como IntelliJ IDEA.
+Configurar o Banco de Dados
+Crie um banco de dados vazio no seu PostgreSQL (por exemplo, meu_banco_de_dados).
+No arquivo de configuração do Spring Boot (src/main/resources/application.properties), atualize as credenciais do banco de dados com suas informações:
+spring.datasource.url=jdbc:postgresql://localhost:5432/meu_banco_de_dados
+spring.datasource.username=seu_usuario
+spring.datasource.password=sua_senha
 
-Um editor de código de sua preferência (como VS Code, Sublime Text ou Atom).
+Executar o Projeto
 
-2. Executar o Projeto
-Clone ou baixe o projeto para sua máquina.
+Abra o projeto na sua IDE.
 
-Abra o arquivo index.html diretamente no seu navegador. Não é necessário um servidor web.
+Execute a classe principal da aplicação (aquela com a anotação @SpringBootApplication).
 
-Visualize e interaja com a tela de login.
+O Spring Boot irá iniciar a aplicação em http://localhost:8080/administrativo
+
+As tabelas do banco de dados serão criadas automaticamente pelo Spring Data JPA na primeira execução.
 
 📦 **Estrutura do Projeto**
 
-TelaDeLoginAnimada/
-├── index.html  # Estrutura HTML da página
-├── css/
-│   └── style.css  # Folha de estilos CSS para o design e animações
-└── js/
-    └── app.js   # Lógica JavaScript para interatividade
-
+nome-do-seu-projeto/
+├── src/main/java/com/seuprojeto/
+│   ├── controller/      # Controladores que lidam com requisições
+│   ├── model/           # Classes de entidade (Cidades, Funcionários, Estados)
+│   ├── repository/      # Interfaces para acesso ao banco de dados
+│   └── service/         # Lógica de negócio da aplicação
+├── src/main/resources/
+│   ├── static/          # Arquivos CSS, JS e imagens
+│   ├── templates/       # Páginas HTML
+│   └── application.properties # Configurações da aplicação
+└── pom.xml                  # Gerenciador de dependências Maven
 
 👤 **Autor**
+Projeto desenvolvido para fins de aprendizado e demonstração de um sistema web completo, com back-end e front-end integrados, visando treinanr conceito de Programação orientada a objetos, Banco de dados Relacional, Spring Boot.
 
-Projeto criado para fins didáticos, com foco no desenvolvimento de habilidades em front-end básico.
